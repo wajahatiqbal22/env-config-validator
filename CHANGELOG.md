@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2024-01-XX
 
 ### Added
-- Initial release of env_schema_validator
+- Initial release of env-config-validator
 - JSON Schema-based environment variable validation
 - Runtime and build-time validation support
 - Command-line interface with `validate`, `check`, and `init` commands

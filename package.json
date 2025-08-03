@@ -1,5 +1,5 @@
 {
-  "name": "env_schema_validator",
+  "name": "env-config-validator",
   "version": "1.0.0",
   "description": "Validate your .env files at runtime or build time using JSON schema definitions",
   "main": "dist/index.js",
@@ -31,12 +31,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/env_schema_validator.git"
+    "url": "https://github.com/your-org/env-config-validator.git"
   },
   "bugs": {
-    "url": "https://github.com/your-org/env_schema_validator/issues"
+    "url": "https://github.com/your-org/env-config-validator/issues"
   },
-  "homepage": "https://github.com/your-org/env_schema_validator#readme",
+  "homepage": "https://github.com/your-org/env-config-validator#readme",
   "files": [
     "dist/",
     "README.md",

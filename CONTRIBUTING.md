@@ -1,6 +1,6 @@
-# Contributing to env_schema_validator
+# Contributing to env-config-validator
 
-Thank you for your interest in contributing to env_schema_validator! This document provides guidelines and information for contributors.
+Thank you for your interest in contributing to env-config-validator! This document provides guidelines and information for contributors.
 
 ## Development Setup
 
@@ -13,8 +13,8 @@ Thank you for your interest in contributing to env_schema_validator! This docume
 
 1. **Fork and Clone**
    ```bash
-   git clone https://github.com/yourusername/env_schema_validator.git
-   cd env_schema_validator
+   git clone https://github.com/yourusername/env-config-validator.git
+   cd env-config-validator
    ```
 
 2. **Install Dependencies**

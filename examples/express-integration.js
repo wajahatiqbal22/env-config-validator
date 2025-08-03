@@ -1,6 +1,6 @@
 // Express.js integration example
 const express = require('express');
-const { validateEnv } = require('env_schema_validator');
+const { validateEnv } = require('env-config-validator');
 
 // Validate environment at startup
 const env = validateEnv({

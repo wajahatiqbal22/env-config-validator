@@ -1,6 +1,6 @@
-# env_schema_validator
+# env-config-validator
 
-[![npm version](https://badge.fury.io/js/env_schema_validator.svg)](https://badge.fury.io/js/env_schema_validator)
+[![npm version](https://badge.fury.io/js/env-config-validator.svg)](https://badge.fury.io/js/env-config-validator)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.typescriptlang.org/)
 
@@ -20,11 +20,11 @@ A robust Node.js package for validating environment variables at runtime or buil
 ## Installation
 
 ```bash
-npm install env_schema_validator
+npm install env-config-validator
 # or
-yarn add env_schema_validator
+yarn add env-config-validator
 # or
-pnpm add env_schema_validator
+pnpm add env-config-validator
 ```
 
 ## Quick Start
@@ -100,7 +100,7 @@ npx env-validate validate --schema ./config/env.schema.json --env ./.env.product
 #### Programmatic Usage
 
 ```typescript
-import { validateEnv, EnvValidator } from "env_schema_validator";
+import { validateEnv, EnvValidator } from "env-config-validator";
 
 // Simple validation with auto-exit on error
 const env = validateEnv();
@@ -215,7 +215,7 @@ Options:
 Simple validation function that returns processed environment variables.
 
 ```typescript
-import { validateEnv } from "env_schema_validator";
+import { validateEnv } from "env-schema-validator";
 
 const env = validateEnv({
   schemaPath: ".env.schema.json",
@@ -229,7 +229,7 @@ const env = validateEnv({
 Advanced validator class for custom validation logic.
 
 ```typescript
-import { EnvValidator } from "env_schema_validator";
+import { EnvValidator } from "env-config-validator";
 
 const validator = new EnvValidator(options);
 const result = validator.validate();
