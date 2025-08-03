@@ -1,6 +1,6 @@
 {
   "name": "env-config-validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Validate your .env files at runtime or build time using JSON schema definitions",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -31,12 +31,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/env-config-validator.git"
+    "url": "https://github.com/wajahatiqbal22/env-config-validator.git"
   },
   "bugs": {
-    "url": "https://github.com/your-org/env-config-validator/issues"
+    "url": "https://github.com/wajahatiqbal22/env-config-validator/issues"
   },
-  "homepage": "https://github.com/your-org/env-config-validator#readme",
+  "homepage": "https://github.com/wajahatiqbal22/env-config-validator#readme",
   "files": [
     "dist/",
     "README.md",
