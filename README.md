@@ -85,6 +85,7 @@ DEBUG=true
 ### 3. Validate
 
 #### Command Line
+
 ```bash
 # Validate environment variables
 npx env-validate validate
@@ -99,7 +100,7 @@ npx env-validate validate --schema ./config/env.schema.json --env ./.env.product
 #### Programmatic Usage
 
 ```typescript
-import { validateEnv, EnvValidator } from 'env-schema-validator';
+import { validateEnv, EnvValidator } from "env-schema-validator";
 
 // Simple validation with auto-exit on error
 const env = validateEnv();
@@ -108,18 +109,18 @@ console.log(env.DEBUG); // boolean: true
 
 // Advanced usage with custom options
 const validator = new EnvValidator({
-  schemaPath: './config/env.schema.json',
-  envPath: './.env.production',
+  schemaPath: "./config/env.schema.json",
+  envPath: "./.env.production",
   strict: true,
   allowUnknown: false,
-  exitOnError: false
+  exitOnError: false,
 });
 
 const result = validator.validate();
 if (result.valid) {
-  console.log('✅ Environment is valid!');
+  console.log("✅ Environment is valid!");
 } else {
-  console.error('❌ Validation errors:', result.errors);
+  console.error("❌ Validation errors:", result.errors);
 }
 ```
 
@@ -173,6 +174,7 @@ if (result.valid) {
 ## CLI Commands
 
 ### `validate`
+
 Comprehensive validation with detailed output:
 
 ```bash
@@ -188,6 +190,7 @@ Options:
 ```
 
 ### `check`
+
 Quick validation check (minimal output):
 
 ```bash
@@ -195,6 +198,7 @@ npx env-validate check [options]
 ```
 
 ### `init`
+
 Initialize a new schema file:
 
 ```bash
@@ -211,12 +215,12 @@ Options:
 Simple validation function that returns processed environment variables.
 
 ```typescript
-import { validateEnv } from 'env-schema-validator';
+import { validateEnv } from "env-schema-validator";
 
 const env = validateEnv({
-  schemaPath: '.env.schema.json',
-  envPath: '.env',
-  exitOnError: true
+  schemaPath: ".env.schema.json",
+  envPath: ".env",
+  exitOnError: true,
 });
 ```
 
@@ -225,7 +229,7 @@ const env = validateEnv({
 Advanced validator class for custom validation logic.
 
 ```typescript
-import { EnvValidator } from 'env-schema-validator';
+import { EnvValidator } from "env-schema-validator";
 
 const validator = new EnvValidator(options);
 const result = validator.validate();
@@ -235,12 +239,12 @@ const result = validator.validate();
 
 ```typescript
 interface ValidatorOptions {
-  schemaPath?: string;     // Path to schema file (default: '.env.schema.json')
-  envPath?: string;        // Path to .env file (default: '.env')
-  strict?: boolean;        // Enable strict mode (default: true)
-  allowUnknown?: boolean;  // Allow unknown variables (default: false)
-  exitOnError?: boolean;   // Exit process on error (default: true)
-  silent?: boolean;        // Suppress output (default: false)
+  schemaPath?: string; // Path to schema file (default: '.env.schema.json')
+  envPath?: string; // Path to .env file (default: '.env')
+  strict?: boolean; // Enable strict mode (default: true)
+  allowUnknown?: boolean; // Allow unknown variables (default: false)
+  exitOnError?: boolean; // Exit process on error (default: true)
+  silent?: boolean; // Suppress output (default: false)
 }
 ```
 
@@ -262,8 +266,8 @@ interface ValidationResult {
 
 ```typescript
 // app.ts
-import express from 'express';
-import { validateEnv } from 'env-schema-validator';
+import express from "express";
+import { validateEnv } from "env-schema-validator";
 
 // Validate environment at startup
 const env = validateEnv();
@@ -319,8 +323,8 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '18'
-      
+          node-version: "18"
+
       - run: npm ci
       - run: npx env-validate validate --env .env.example
       - run: npm test
@@ -349,17 +353,21 @@ Invalid variables: PORT, NODE_ENV
 ## Best Practices
 
 ### 1. Schema Organization
+
 ```json
 {
   "type": "object",
   "properties": {
     // Group related variables
-    "NODE_ENV": { "type": "string", "enum": ["development", "production", "test"] },
-    
+    "NODE_ENV": {
+      "type": "string",
+      "enum": ["development", "production", "test"]
+    },
+
     // Database configuration
     "DATABASE_URL": { "type": "string", "format": "uri" },
     "DATABASE_POOL_SIZE": { "type": "integer", "minimum": 1, "default": 10 },
-    
+
     // API configuration
     "API_KEY": { "type": "string", "minLength": 32 },
     "API_RATE_LIMIT": { "type": "integer", "minimum": 1, "default": 1000 }
@@ -369,6 +377,7 @@ Invalid variables: PORT, NODE_ENV
 ```
 
 ### 2. Environment-Specific Schemas
+
 ```bash
 # Development
 npx env-validate validate --schema .env.schema.json --env .env
@@ -381,6 +390,7 @@ npx env-validate validate --schema .env.schema.test.json --env .env.test
 ```
 
 ### 3. Team Workflows
+
 ```json
 {
   "scripts": {
@@ -398,7 +408,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 ### Development Setup
 
 ```bash
-git clone https://github.com/yourusername/env-schema-validator.git
+git clone https://github.com/wajahatiqbal22/env-schema-validator.git
 cd env-schema-validator
 npm install
 npm run build
@@ -415,6 +425,6 @@ See [CHANGELOG.md](CHANGELOG.md) for release history.
 
 ## Support
 
-- 📖 [Documentation](https://github.com/yourusername/env-schema-validator#readme)
-- 🐛 [Issue Tracker](https://github.com/yourusername/env-schema-validator/issues)
-- 💬 [Discussions](https://github.com/yourusername/env-schema-validator/discussions)
+- 📖 [Documentation](https://github.com/wajahatiqbal22/env-schema-validator#readme)
+- 🐛 [Issue Tracker](https://github.com/wajahatiqbal22/env-schema-validator/issues)
+- 💬 [Discussions](https://github.com/wajahatiqbal22/env-schema-validator/discussions)
