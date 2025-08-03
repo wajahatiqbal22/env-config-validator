@@ -1,5 +1,5 @@
-// Basic usage example for env-schema-validator
-const { validateEnv } = require('env-schema-validator');
+// Basic usage example for env_schema_validator
+const { validateEnv } = require('env_schema_validator');
 
 // This will validate your environment variables against .env.schema.json
 // and return the processed environment with proper types
