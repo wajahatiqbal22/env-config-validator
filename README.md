@@ -417,7 +417,7 @@ npm test
 
 ## License
 
-MIT © [Your Name](https://github.com/yourusername)
+MIT © [Wajahat Iqbal](https://github.com/wajahatiqbal22)
 
 ## Changelog
 
