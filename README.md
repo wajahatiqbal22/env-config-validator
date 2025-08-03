@@ -215,7 +215,7 @@ Options:
 Simple validation function that returns processed environment variables.
 
 ```typescript
-import { validateEnv } from "env-schema-validator";
+import { validateEnv } from "env-config-validator";
 
 const env = validateEnv({
   schemaPath: ".env.schema.json",
@@ -267,7 +267,7 @@ interface ValidationResult {
 ```typescript
 // app.ts
 import express from "express";
-import { validateEnv } from "env-schema-validator";
+import { validateEnv } from "env-config-validator";
 
 // Validate environment at startup
 const env = validateEnv();
@@ -408,8 +408,8 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 ### Development Setup
 
 ```bash
-git clone https://github.com/wajahatiqbal22/env-schema-validator.git
-cd env-schema-validator
+git clone https://github.com/wajahatiqbal22/env-config-validator.git
+cd env-config-validator
 npm install
 npm run build
 npm test
@@ -425,6 +425,6 @@ See [CHANGELOG.md](CHANGELOG.md) for release history.
 
 ## Support
 
-- 📖 [Documentation](https://github.com/wajahatiqbal22/env-schema-validator#readme)
-- 🐛 [Issue Tracker](https://github.com/wajahatiqbal22/env-schema-validator/issues)
-- 💬 [Discussions](https://github.com/wajahatiqbal22/env-schema-validator/discussions)
+- 📖 [Documentation](https://github.com/wajahatiqbal22/env-config-validator#readme)
+- 🐛 [Issue Tracker](https://github.com/wajahatiqbal22/env-config-validator/issues)
+- 💬 [Discussions](https://github.com/wajahatiqbal22/env-config-validator/discussions)
